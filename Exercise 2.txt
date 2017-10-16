@@ -48,3 +48,13 @@ print(abs(site1_npp_day - site2_npp_day))
 > daily <- sum(site1_npp_day, site2_npp_day)
 > print(daily * 365)
 [1] 742775
+
+#Exercise 6
+
+#sets up the excell file as the working directory
+> setwd("~/GitHub/intro-to-r-emily-and-darrick")
+> ppt_data <- read.csv("gainesville-precip.csv", header = FALSE)
+#creates variable and compoutes means of the columns of matrix
+> monthly_mean_ppt <- colMeans(ppt_data)
+#creates plot with x and y variables
+> plot(monthly_mean_ppt, type = "l", xlab = "Month", ylab = "Mean Precipitation")
