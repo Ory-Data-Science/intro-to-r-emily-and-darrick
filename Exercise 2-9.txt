@@ -1,0 +1,62 @@
+# Exercise 2
+body_mass_lbs <- 3.5
+body_mass_kg <- body_mass_lbs / 2.2046
+print(body_mass_kg)
+
+# Exercise 3
+library(tidyverse)
+grams <- 250
+number <- 3
+biomass <- grams*number
+biomass_kg <- biomass / 1000
+print(biomass_kg)
+
+# Exercise 4
+> abs(-15.5)
+[1] 15.5
+> round(4.483846, digits = 1)
+[1] 4.5
+> round(3.8)
+[1] 4
+> species <- "SPECIES"
+> tolower(species)
+[1] "species"
+> toupper(species)
+[1] "SPECIES"
+> number <- sqrt(2.6)
+> round(number, digits = 2)
+[1] 1.61
+> number_2 <- round(number, digits = 2)
+> print(number_2)
+[1] 1.61
+> number_3 <- round(sqrt(2.6), digits = 2)
+> print(number_3)
+[1] 1.61
+
+#Exercise 5
+
+site1_g_carbon_m2_day <- 5
+site2_g_carbon_m2_day <- 2.3
+site1_area_m2 <- 200
+site2_area_m2 <- 450
+site1_npp_day <- site1_g_carbon_m2_day * site1_area_m2
+site2_npp_day <- site2_g_carbon_m2_day * site2_area_m2
+> print(sum(site1_npp_day, site2_npp_day))
+[1] 2035
+print(abs(site1_npp_day - site2_npp_day))
+[1] 35
+> daily <- sum(site1_npp_day, site2_npp_day)
+> print(daily * 365)
+[1] 742775
+
+#Exercise 6
+
+#sets up the excell file as the working directory
+> setwd("~/GitHub/intro-to-r-emily-and-darrick")
+> ppt_data <- read.csv("gainesville-precip.csv", header = FALSE)
+#creates variable and compoutes means of the columns of matrix
+> monthly_mean_ppt <- colMeans(ppt_data)
+#creates plot with x and y variables
+> plot(monthly_mean_ppt, type = "l", xlab = "Month", ylab = "Mean Precipitation")
+
+
