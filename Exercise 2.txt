@@ -1,0 +1,4 @@
+# Exercise 2
+body_mass_lbs <- 3.5
+body_mass_kg <- body_mass_lbs / 2.2046
+print(body_mass_kg)
